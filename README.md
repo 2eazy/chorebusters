@@ -10,3 +10,4 @@ Collect payment for claimed chore
 Limit number of chores that can be claimed at the same time by the same user
 Set an expiery timer for chores (for example empty diswasher or setting table may only be availalbe for 15 minutes or so)
 
+hello world
