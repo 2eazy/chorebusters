@@ -2,6 +2,16 @@ const tasks = [];
 const loginForm = document.getElementById("login-form");
 const loginButton = document.getElementById("login-form-submit");
 const loginErrorMsg = document.getElementById("login-error-msg");
+const users = [{
+    name: "Anders",
+    password: "sredna",
+    role: "Admin"
+    },
+    {name: "Vincent",
+    password: "tnecniv",
+    role: "user"
+
+}]
 let loggedInUser = ""
 
 loginButton.addEventListener("click", (e) => {
@@ -9,6 +19,19 @@ loginButton.addEventListener("click", (e) => {
     const username = loginForm.username.value;
     const password = loginForm.password.value;
 
+    users.forEach((user) => {
+        if (user.name === username && user.password === password){
+            loggedInUser = "user";
+        alert("You have successfully logged in.");
+        location.replace("create.html");
+    } else {
+        loginErrorMsg.style.opacity = 1;
+    }
+        }
+    )
+}
+)
+/*
     if (username === "user" && password === "1234") {
         loggedInUser = "user";
         alert("You have successfully logged in.");
@@ -17,6 +40,7 @@ loginButton.addEventListener("click", (e) => {
         loginErrorMsg.style.opacity = 1;
     }
 })
+*/
 
 function createTask() {
     const taskName = document.getElementById('taskName').value;
