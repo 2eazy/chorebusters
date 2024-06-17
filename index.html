@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Management</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="loginStyle.css">
+  <script defer src="script.js"></script>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Task Management</h1>
-        <div class="admin-section">
-            <h2>Create Task</h2>
-            <input type="text" id="taskName" placeholder="Task Name">
-            <input type="number" id="taskValue" placeholder="Task Value">
-            <button onclick="createTask()">Create Task</button>
-        </div>
-        <div class="task-list">
-            <h2>Available Tasks</h2>
-            <ul id="tasks"></ul>
-        </div>
+  <main id="main-holder">
+    <h1 id="login-header">Login</h1>
+    <h2 id="login-info">Username: user // Password: 1234</h2>
+    <div id="login-error-msg-holder">
+      <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
     </div>
-    <script src="script.js"></script>
+    
+    <form id="login-form">
+      <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
+      <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
+      <input type="submit" value="Login" id="login-form-submit">
+    </form>
+  
+  </main>
 </body>
 </html>
